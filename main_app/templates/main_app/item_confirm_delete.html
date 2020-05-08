@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>DELETE WISH ITEM</h1>
+
+<h4>Are you sure you want to delete <span class="teal-text">{{ object.item }}</span>?</h4>
+
+<form class="pure-form" action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes - Delete!" class="pure-button">
+  <a href="{% url 'wishlist_index' %}">Cancel</a>
+</form>
+
+{% endblock %}
+
+
+
+
